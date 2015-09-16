@@ -1,10 +1,9 @@
 @basic-font: 16px;
 @font-family: 'Open Sans', sans-serif;
-@font-family-light: 'Open Sans Condensed', sans-serif;
-@text-color: #373637;
-@super-light-text: #afafaf;
-@grey-text: #707070;
-@dark-grey-text: #898989;
+@text-color: #231f20;
+@super-light-text: #ccc;
+@light-text: #898989;
+@grey-text: #959595;
 @link: #0aaf5f;
 @light-link: #00b550;
 @input-border: #e1e1e1;
@@ -12,10 +11,12 @@
 @grey: #d7d7d7;
 @green: #0aaf5f;
 @lime: #8dc63f;
-@orange: #f26522;
+@orange: #f1592a;
 @blue: #00aeef;
-@middle-grey: #ebebeb;
-@aqua: #40b0a7;
+@lime: #8dc63f;
+@brown: #9c867a;
+@yellow: #e1c211;
+@white: #FFF;
 @notebook: ~"(max-height: 800px)";
 @mobile: ~"(max-width: 768px)";
 @tablet: ~"(min-width: 768px) and (max-width: 992px)";
@@ -23,24 +24,336 @@
 
 
 
-body { background: #FFF; font-family: @font-family; font-size: @basic-font; color: @text-color;}
+body { background: #FFF; font-family: @font-family; font-size: @basic-font; font-weight: 400; color: @text-color;}
 h1,h2,h3,h4,h6,h6,p,ul,li {margin: 0; padding:0px; }
+a { color: inherit;}
 
-.city-filter{
-	position: relative;
-	& .city-list{
-		background: #FFF;
-		display: none;
-		position: absolute;
+.somit-header{
+	& .container{
+		background: url(../img/bg-border.png) no-repeat center bottom;
+		margin-bottom: 14px;
+		padding-bottom: 20px;
+	}
+	& .top-logo{
+		display: block;
+		margin-top: 37px;
+		width: 261px;
+		@media @mobile_tablet{
+			margin: 10px auto;
+		}
+	}
+	& .top-header{
+		margin-top: 40px;
+		padding-left: 15px;
+		@media @mobile_tablet{
+			margin-top: 10px;
+			padding-left: 0px;
+		}
+		& .descr{
+			color: @light-text;
+			font-size: 14px;
+			float: left;			
+			
+			width: 55%;
+		}
+		& .weather-enter{
+			float: left;
+			width: 38%;
+			margin-left: 7%;
+			@media @mobile_tablet{
+				width: 44%;
+				margin-left: 1%;
+			}
+			& .enter-block{
+				float: right;
+				width: 70px;
+				& .btn{
+					font-weight: 600;
+					text-transform: uppercase;
+				}
+			}
+			& .weather-block{
+				margin-right: 90px;
+			}
+			& .city-filter{
+				cursor: pointer;
+				font-size: 14px;
+				float: left;
+				position: relative;
+				text-transform: uppercase;
+				width: 105px;
+				z-index: 300;
+				& .name{
+					color: @orange;
+					display: inline-block;
+					line-height: 20px;
+					padding-left: 4px;
+					vertical-align: middle;
+					width: 84px;
+				}
+				& .icon{
+					margin-left: 5px;
+					vertical-align: middle;
+				}
+				& .city-list{
+					background: #FFF;
+					display: none;
+					position: absolute;
+					width: 105px;
+					& ul {
+						box-shadow: 0px 0px 1px 0px #CCC;
+					}
+					& ul li{
+						list-style: none;
+						font-size: 12px;
+						padding: 2px 4px;
+						&:hover{
+							background: lighten(@super-light-text, 10%);
+						}
+					}
+				}
+			}
+			& .weather{
+				margin-left: 105px;
+				width:  100px;
+				white-space: nowrap;
+				& .weather-icon{
+					display: inline-block;
+					margin-top: -10px;
+					width: 50px;
+					vertical-align: top;
+				}
+				& .weather-temp{
+					display: inline-block;
+					font-size: 18px;
+					white-space: nowrap; 
+					vertical-align: top;
+					& .weather-zero{
+						font-size: 12px;
+						vertical-align: super;
+					}
+				}
+			}
+		}
+	}
+	& .bottom-header{
+		clear: both;
+		& .search-block{
+			float: right;
+			margin-top: 20px;
+			width: 20px;
+			& .icon{
+				cursor: pointer;
+			}
+		}
+		& .menu{
+			min-height: 55px;
+			margin-right: 40px;
+			padding-top: 16px;
+			& ul{
+				& li{
+					font-size: 25px;
+					font-weight: 200;
+					margin-right: 10px;					
+					text-transform: uppercase;
+					@media @mobile_tablet{
+						font-size: 20px;
+						margin-right: 0px;
+					}
+					& a{
+						border: 1px solid transparent;
+						border-radius: 3px;
+						padding: 4px 14px;
+						color: @text-color;
+						@media @mobile_tablet{
+							padding: 4px 10px;
+						}
+						&:hover, &.hover{
+							border: 1px solid #c7c4c6;
+							text-decoration: none;
+						}
+					}
+					& ul{
+						border: 1px solid #c7c4c6;
+						border-radius: 3px;
+						background: #f8f8f8;
+						margin-top: 1px;
+						padding: 2px 0;
+						& li{
+							font-weight: 300;
+							font-size: 14px;
+							@media @mobile_tablet{
+								font-size: 12px;
+							}
+							& a{
+								border: none;
+								padding: 2px 12px;
+								@media @mobile_tablet{
+									padding: 2px 9px;
+								}
+								&:hover{
+									border: none;
+									color: @orange;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
+.btn{
+	border: none;
+	border-radius: 3px;
+	display: inline-block;
+	font-size: 14px;
+	padding: 5px 15px;
+	&--green{
+		background: @lime;
+		color: @white;
+		&:hover{
+			background: saturate(@lime, 20%);
+			color: @white;
+			text-decoration: none;
+		}
+	}	
+}
+
 .menu{
 	ul{
-		overflow: hidden;
+		position: relative;
 	}
 	li{
 		display: block;
 		float: left;
 		list-style: none;
+		& ul{
+			display: none;
+			position: absolute;
+			z-index: 200;
+			& li{
+				float: none;
+			}
+		}
 	}
+}
+.icon{
+    background-image: url(../img/spritesheet.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+.icon-arrow-left {
+    width: 6px;
+    height: 20px;
+    background-position: -10px -10px;
+}
+.icon-arrow-right {
+    width: 6px;
+    height: 20px;
+    background-position: -36px -10px;
+}
+.icon-comments {
+    width: 16px;
+    height: 13px;
+    background-position: -62px -10px;
+}
+.icon-flag {
+    width: 27px;
+    height: 38px;
+    background-position: -62px -43px;
+}
+.icon-opener {
+    width: 11px;
+    height: 7px;
+    background-position: -98px -10px;
+}
+.icon-opener-open {
+    width: 11px;
+    height: 7px;
+    background-position: -109px -37px;
+}
+.icon-phone {
+    width: 24px;
+    height: 24px;
+    background-position: -140px -10px;
+}
+.icon-place {
+    width: 21px;
+    height: 27px;
+    background-position: -10px -54px;
+}
+.icon-search {
+    width: 20px;
+    height: 20px;
+    background-position: -140px -54px;
+}
+.icon-time {
+    width: 26px;
+    height: 30px;
+    background-position: -109px -94px;
+}
+.icon-views {
+    width: 24px;
+    height: 12px;
+    background-position: -10px -144px;
+}
+.icon-to-top {
+    width: 13px;
+    height: 8px;
+    background-position: -155px -94px;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url("fonts/osans/opensans-light.eot");
+  src: url("fonts/osans/opensans-light.eot?#iefix")format("embedded-opentype"),
+  url("fonts/osans/opensans-light.woff") format("woff"),
+  url("fonts/osans/opensans-light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/osans/opensans-regular.eot");
+  src: url("fonts/osans/opensans-regular.eot?#iefix")format("embedded-opentype"),
+  url("fonts/osans/opensans-regular.woff") format("woff"),
+  url("fonts/osans/opensans-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url("fonts/osans/opensans-semibold.eot");
+  src: url("fonts/osans/opensans-semibold.eot?#iefix")format("embedded-opentype"),
+  url("fonts/osans/opensans-semibold.woff") format("woff"),
+  url("fonts/osans/opensans-semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url("fonts/osans/opensans-italic.eot");
+  src: url("fonts/osans/opensans-italic.eot?#iefix")format("embedded-opentype"),
+  url("fonts/osans/opensans-italic.woff") format("woff"),
+  url("fonts/osans/opensans-italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 200;
+  src: url("fonts/osans/open_sans_condensed_light.eot");
+  src: url("fonts/osans/open_sans_condensed_light.eot?#iefix")format("embedded-opentype"),
+  url("fonts/osans/open_sans_condensed_light.woff") format("woff"),
+  url("fonts/osans/open_sans_condensed_light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/arvo/arvo-regular.eot");
+  src: url("fonts/arvo/arvo-regular.eot?#iefix")format("embedded-opentype"),
+  url("fonts/arvo/arvo-regular.woff") format("woff"),
+  url("fonts/arvo/arvo-regular.ttf") format("truetype");
 }

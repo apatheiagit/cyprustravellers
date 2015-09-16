@@ -2,14 +2,28 @@ $(function(){
 	getWeather("Limassol");
   	$('.current-city').click(function(){
   		$('.city-list').toggle();
-  		$('.opener').toggleClass('open');
+  		$('.icon-opener').toggleClass('icon-opener-open');
   	});
-  	$('.city-list span').click(function(){
+  	$('.city-list li').click(function(){
   		$('.current-city').children('.name').text($(this).text());
-  		getWeather($(this).attr('data-city'));
+  		getWeather($(this).children('span').attr('data-city'));
   		$('.city-list').toggle();
-  		$('.opener').toggleClass('open');
-  	})
+  		$('.icon-opener').toggleClass('icon-opener-open');
+  	});
+    $('.top-menu>ul>li').hover(function(){
+      var width = $(this).children('a').innerWidth();
+      $(this).children('a').addClass('hover');
+      $(this).children('ul').width(width).slideDown();
+    }, function(){
+      $(this).children('a').removeClass('hover');
+      $(this).children('ul').slideUp();
+    });
+    $('.top-menu>ul>li>ul').hover(function(){
+      $(this).parent().children('a').addClass('hover');
+    }, function(){
+      $(this).parent().children('a').removeClass('hover');;
+    });
+
 })
 function getWeather(city){		
 	$.ajax({
@@ -22,5 +36,5 @@ function getWeather(city){
 }
 function weatherCallBack(data){
     $('.weather-icon img').attr('src', 'http://openweathermap.org/img/w/'+ data.weather[0].icon +'.png');
-    $('.weather-degree').text(data.main.temp);
+    $('.weather-degree').text(Math.round(data.main.temp));
 }

@@ -1,8 +1,9 @@
 body {
-  background: white;
+  background: #FFF;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  color: #373637;
+  font-weight: 400;
+  color: #231f20;
 }
 h1,
 h2,
@@ -16,19 +17,330 @@ li {
   margin: 0;
   padding: 0px;
 }
-.city-filter {
-  position: relative;
+a {
+  color: inherit;
 }
-.city-filter .city-list {
-  background: white;
+.somit-header .container {
+  background: url(../img/bg-border.png) no-repeat center bottom;
+  margin-bottom: 14px;
+  padding-bottom: 20px;
+}
+.somit-header .top-logo {
+  display: block;
+  margin-top: 37px;
+  width: 261px;
+}
+@media (max-width: 992px) {
+  .somit-header .top-logo {
+    margin: 10px auto;
+  }
+}
+.somit-header .top-header {
+  margin-top: 40px;
+  padding-left: 15px;
+}
+@media (max-width: 992px) {
+  .somit-header .top-header {
+    margin-top: 10px;
+    padding-left: 0px;
+  }
+}
+.somit-header .top-header .descr {
+  color: #898989;
+  font-size: 14px;
+  float: left;
+  width: 55%;
+}
+.somit-header .top-header .weather-enter {
+  float: left;
+  width: 38%;
+  margin-left: 7%;
+}
+@media (max-width: 992px) {
+  .somit-header .top-header .weather-enter {
+    width: 44%;
+    margin-left: 1%;
+  }
+}
+.somit-header .top-header .weather-enter .enter-block {
+  float: right;
+  width: 70px;
+}
+.somit-header .top-header .weather-enter .enter-block .btn {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.somit-header .top-header .weather-enter .weather-block {
+  margin-right: 90px;
+}
+.somit-header .top-header .weather-enter .city-filter {
+  cursor: pointer;
+  font-size: 14px;
+  float: left;
+  position: relative;
+  text-transform: uppercase;
+  width: 105px;
+  z-index: 300;
+}
+.somit-header .top-header .weather-enter .city-filter .name {
+  color: #f1592a;
+  display: inline-block;
+  line-height: 20px;
+  padding-left: 4px;
+  vertical-align: middle;
+  width: 84px;
+}
+.somit-header .top-header .weather-enter .city-filter .icon {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+.somit-header .top-header .weather-enter .city-filter .city-list {
+  background: #FFF;
   display: none;
   position: absolute;
+  width: 105px;
+}
+.somit-header .top-header .weather-enter .city-filter .city-list ul {
+  box-shadow: 0px 0px 1px 0px #CCC;
+}
+.somit-header .top-header .weather-enter .city-filter .city-list ul li {
+  list-style: none;
+  font-size: 12px;
+  padding: 2px 4px;
+}
+.somit-header .top-header .weather-enter .city-filter .city-list ul li:hover {
+  background: #e6e6e6;
+}
+.somit-header .top-header .weather-enter .weather {
+  margin-left: 105px;
+  width: 100px;
+  white-space: nowrap;
+}
+.somit-header .top-header .weather-enter .weather .weather-icon {
+  display: inline-block;
+  margin-top: -10px;
+  width: 50px;
+  vertical-align: top;
+}
+.somit-header .top-header .weather-enter .weather .weather-temp {
+  display: inline-block;
+  font-size: 18px;
+  white-space: nowrap;
+  vertical-align: top;
+}
+.somit-header .top-header .weather-enter .weather .weather-temp .weather-zero {
+  font-size: 12px;
+  vertical-align: super;
+}
+.somit-header .bottom-header {
+  clear: both;
+}
+.somit-header .bottom-header .search-block {
+  float: right;
+  margin-top: 20px;
+  width: 20px;
+}
+.somit-header .bottom-header .search-block .icon {
+  cursor: pointer;
+}
+.somit-header .bottom-header .menu {
+  min-height: 55px;
+  margin-right: 40px;
+  padding-top: 16px;
+}
+.somit-header .bottom-header .menu ul li {
+  font-size: 25px;
+  font-weight: 200;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+@media (max-width: 992px) {
+  .somit-header .bottom-header .menu ul li {
+    font-size: 20px;
+    margin-right: 0px;
+  }
+}
+.somit-header .bottom-header .menu ul li a {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 4px 14px;
+  color: #231f20;
+}
+@media (max-width: 992px) {
+  .somit-header .bottom-header .menu ul li a {
+    padding: 4px 10px;
+  }
+}
+.somit-header .bottom-header .menu ul li a:hover,
+.somit-header .bottom-header .menu ul li a.hover {
+  border: 1px solid #c7c4c6;
+  text-decoration: none;
+}
+.somit-header .bottom-header .menu ul li ul {
+  border: 1px solid #c7c4c6;
+  border-radius: 3px;
+  background: #f8f8f8;
+  margin-top: 1px;
+  padding: 2px 0;
+}
+.somit-header .bottom-header .menu ul li ul li {
+  font-weight: 300;
+  font-size: 14px;
+}
+@media (max-width: 992px) {
+  .somit-header .bottom-header .menu ul li ul li {
+    font-size: 12px;
+  }
+}
+.somit-header .bottom-header .menu ul li ul li a {
+  border: none;
+  padding: 2px 12px;
+}
+@media (max-width: 992px) {
+  .somit-header .bottom-header .menu ul li ul li a {
+    padding: 2px 9px;
+  }
+}
+.somit-header .bottom-header .menu ul li ul li a:hover {
+  border: none;
+  color: #f1592a;
+}
+.btn {
+  border: none;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 14px;
+  padding: 5px 15px;
+}
+.btn--green {
+  background: #8dc63f;
+  color: #ffffff;
+}
+.btn--green:hover {
+  background: #91df26;
+  color: #ffffff;
+  text-decoration: none;
 }
 .menu ul {
-  overflow: hidden;
+  position: relative;
 }
 .menu li {
   display: block;
   float: left;
   list-style: none;
+}
+.menu li ul {
+  display: none;
+  position: absolute;
+  z-index: 200;
+}
+.menu li ul li {
+  float: none;
+}
+.icon {
+  background-image: url(../img/spritesheet.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.icon-arrow-left {
+  width: 6px;
+  height: 20px;
+  background-position: -10px -10px;
+}
+.icon-arrow-right {
+  width: 6px;
+  height: 20px;
+  background-position: -36px -10px;
+}
+.icon-comments {
+  width: 16px;
+  height: 13px;
+  background-position: -62px -10px;
+}
+.icon-flag {
+  width: 27px;
+  height: 38px;
+  background-position: -62px -43px;
+}
+.icon-opener {
+  width: 11px;
+  height: 7px;
+  background-position: -98px -10px;
+}
+.icon-opener-open {
+  width: 11px;
+  height: 7px;
+  background-position: -109px -37px;
+}
+.icon-phone {
+  width: 24px;
+  height: 24px;
+  background-position: -140px -10px;
+}
+.icon-place {
+  width: 21px;
+  height: 27px;
+  background-position: -10px -54px;
+}
+.icon-search {
+  width: 20px;
+  height: 20px;
+  background-position: -140px -54px;
+}
+.icon-time {
+  width: 26px;
+  height: 30px;
+  background-position: -109px -94px;
+}
+.icon-views {
+  width: 24px;
+  height: 12px;
+  background-position: -10px -144px;
+}
+.icon-to-top {
+  width: 13px;
+  height: 8px;
+  background-position: -155px -94px;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url("fonts/osans/opensans-light.eot");
+  src: url("fonts/osans/opensans-light.eot?#iefix") format("embedded-opentype"), url("fonts/osans/opensans-light.woff") format("woff"), url("fonts/osans/opensans-light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/osans/opensans-regular.eot");
+  src: url("fonts/osans/opensans-regular.eot?#iefix") format("embedded-opentype"), url("fonts/osans/opensans-regular.woff") format("woff"), url("fonts/osans/opensans-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url("fonts/osans/opensans-semibold.eot");
+  src: url("fonts/osans/opensans-semibold.eot?#iefix") format("embedded-opentype"), url("fonts/osans/opensans-semibold.woff") format("woff"), url("fonts/osans/opensans-semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url("fonts/osans/opensans-italic.eot");
+  src: url("fonts/osans/opensans-italic.eot?#iefix") format("embedded-opentype"), url("fonts/osans/opensans-italic.woff") format("woff"), url("fonts/osans/opensans-italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 200;
+  src: url("fonts/osans/open_sans_condensed_light.eot");
+  src: url("fonts/osans/open_sans_condensed_light.eot?#iefix") format("embedded-opentype"), url("fonts/osans/open_sans_condensed_light.woff") format("woff"), url("fonts/osans/open_sans_condensed_light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/arvo/arvo-regular.eot");
+  src: url("fonts/arvo/arvo-regular.eot?#iefix") format("embedded-opentype"), url("fonts/arvo/arvo-regular.woff") format("woff"), url("fonts/arvo/arvo-regular.ttf") format("truetype");
 }
