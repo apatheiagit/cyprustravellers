@@ -8,6 +8,7 @@
 @light-link: #00b550;
 @input-border: #e1e1e1;
 @grey-fon: #fafafb;
+@almost-white: #f6f6f6;
 @grey: #d7d7d7;
 @light-grey: #ebebeb;
 @green: #0aaf5f;
@@ -68,9 +69,11 @@ a, a:hover { color: inherit;}
 			& .enter-block{
 				float: right;
 				width: 70px;
-				& .btn{
+				& .butn{
 					font-weight: 600;
 					text-transform: uppercase;
+					position: relative;
+    				z-index: 200;
 				}
 			}
 			& .weather-block{
@@ -408,19 +411,87 @@ a, a:hover { color: inherit;}
 		& a:first-child{ color: @blue; font-weight: 600;}
 	}
 }
-.btn{
+.main-filter{
+	background: @almost-white;
+	border: 1px solid @grey;
+	border-radius: 3px;
+	margin: 20px 0;
+	padding: 10px 14px;
+	& .filter-control{
+		&--apply{
+			margin-left: 14px;
+			@media @mobile_tablet {
+				margin-left: 0;
+			}
+			@media @tablet{
+				text-align: right;
+			}
+		}
+		&--reset{
+			text-align: right;
+		}
+		@media @mobile_tablet{
+			margin-bottom: 10px;
+		}
+	}
+	& .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
+		width: 100%;
+	}
+	& .bootstrap-select{
+		position: relative;
+	}
+	& .btn-default:focus, & .btn-default.focus,
+	& .open>.dropdown-toggle.btn-default, & .btn-default:hover {
+	  	background-color: @white !important;
+	  	border-color: #8c8c8c;
+	}
+	& .caret{ color: @grey-text !important;}
+	& .butn{
+		padding: 7px 14px;
+	}
+}
+.filter-control--city{
+	text-transform: uppercase;
+	& button{
+		text-transform: uppercase;
+	}	
+	.culture & {
+		& .btn-default, & .btn-default:focus, & .btn-default.focus,
+		& .open>.dropdown-toggle.btn-default, & .btn-default:hover { color: @orange;}
+	}
+	.cuisine & {
+		& .btn-default, & .btn-default:focus, & .btn-default.focus,
+		& .open>.dropdown-toggle.btn-default, & .btn-default:hover { color: @lime;}
+	}
+	.entertainment & {
+		& .btn-default, & .btn-default:focus, & .btn-default.focus,
+		& .open>.dropdown-toggle.btn-default, & .btn-default:hover { color: @blue;}
+	}
+}
+.butn{
 	border: none;
 	border-radius: 3px;
 	display: inline-block;
 	font-size: 14px;
 	padding: 5px 15px;
+	text-align: center;
+	&:hover{
+		text-decoration: none;
+	}
 	&--green{
 		background: @lime;
 		color: @white;
 		&:hover{
 			background: saturate(@lime, 20%);
-			color: @white;
-			text-decoration: none;
+			color: @white;			
+		}
+	}
+	&--grey{
+		background: @grey-text;
+		color: @white;
+		&:hover{
+			background: darken(@grey-text, 10%);
+			color: @white;			
 		}
 	}	
 }

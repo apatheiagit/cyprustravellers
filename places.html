@@ -11,8 +11,10 @@
 	<script src="js/main.js"></script>
 	<link rel="stylesheet" href="js/plugins/owl/owl.carousel.css" type="text/css">
 	<link rel="stylesheet" href="js/plugins/owl/animate.css" type="text/css">
-
 	<script src="js/plugins/owl/owl.carousel.min.js"></script>
+	<link rel="stylesheet" href="js/plugins/select/css/bootstrap-select.css">
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/plugins/select/js/bootstrap-select.js"></script>
 </head>
 <body>
 <div class="somit somit-header">
@@ -25,7 +27,7 @@
 				<div class="top-header">
 					<div class="descr">это интернет издание для самостоятельных путешественников и отличный советчик в планировании идеального путешествия</div>
 					<div class="weather-enter">
-						<div class="enter-block"><a href="#" class="btn btn--green">Вход</a></div>
+						<div class="enter-block"><a href="#" class="butn butn--green">Вход</a></div>
 						<div class="weather-block">
 							<div class="city-filter">
 							  <div class="current-city"><span class="name">Лимассол</span><span class="icon icon-opener"></span></div>
@@ -79,6 +81,42 @@
 	<div class="container">
 		<div class="breadcrumbs">
 			<a href="#">культура</a> / <a href="#">места</a> / <span>Один из лучших пляжей «Ladies Mile»</span>
+		</div>
+		<div class="main-filter">
+			<div class="row">
+				<div class="col-sm-6 col-md-3">
+					<div class="filter-control filter-control--select filter-control--city">
+						<select name="" id="" class="selectpicker">
+							<option value="">Выберете город</option>
+							<option value="">Айя-Напа</option>
+							<option value="">Ларнака</option>
+							<option value="">Лимассол</option>
+							<option value="">Никосия</option>
+							<option value="">Пафос</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<div class="filter-control filter-control--select filter-control--category">
+						<select name="" id="" class="selectpicker">
+							<option value="">Выберете категорию</option>
+							<option value="">музеи</option>
+							<option value="">театры</option>
+							<option value="">библиотеки</option>
+							<option value="">выставочные площадки</option>
+							<option value="">концертные залы</option>
+							<option value="">монастыри и церкви</option>
+							<option value="">религиозные сооружения</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-9 col-md-3">
+					<div class="filter-control filter-control--apply"><input value="Применить" type="submit" class="butn butn--green"></div>
+				</div>
+				<div class="col-xs-6 col-sm-3 col-md-3">
+					<div class="filter-control filter-control--reset"><input value="Сбросить фильтр" type="reset" class="butn butn--grey"></div>
+				</div>
+			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-9">

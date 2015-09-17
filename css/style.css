@@ -67,9 +67,11 @@ a:hover {
   float: right;
   width: 70px;
 }
-.somit-header .top-header .weather-enter .enter-block .btn {
+.somit-header .top-header .weather-enter .enter-block .butn {
   font-weight: 600;
   text-transform: uppercase;
+  position: relative;
+  z-index: 200;
 }
 .somit-header .top-header .weather-enter .weather-block {
   margin-right: 90px;
@@ -456,21 +458,106 @@ a:hover {
   color: #00aeef;
   font-weight: 600;
 }
-.btn {
+.main-filter {
+  background: #f6f6f6;
+  border: 1px solid #d7d7d7;
+  border-radius: 3px;
+  margin: 20px 0;
+  padding: 10px 14px;
+}
+.main-filter .filter-control--apply {
+  margin-left: 14px;
+}
+@media (max-width: 992px) {
+  .main-filter .filter-control--apply {
+    margin-left: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .main-filter .filter-control--apply {
+    text-align: right;
+  }
+}
+.main-filter .filter-control--reset {
+  text-align: right;
+}
+@media (max-width: 992px) {
+  .main-filter .filter-control {
+    margin-bottom: 10px;
+  }
+}
+.main-filter .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+  width: 100%;
+}
+.main-filter .bootstrap-select {
+  position: relative;
+}
+.main-filter .btn-default:focus,
+.main-filter .btn-default.focus,
+.main-filter .open > .dropdown-toggle.btn-default,
+.main-filter .btn-default:hover {
+  background-color: #ffffff !important;
+  border-color: #8c8c8c;
+}
+.main-filter .caret {
+  color: #959595 !important;
+}
+.main-filter .butn {
+  padding: 7px 14px;
+}
+.filter-control--city {
+  text-transform: uppercase;
+}
+.filter-control--city button {
+  text-transform: uppercase;
+}
+.culture .filter-control--city .btn-default,
+.culture .filter-control--city .btn-default:focus,
+.culture .filter-control--city .btn-default.focus,
+.culture .filter-control--city .open > .dropdown-toggle.btn-default,
+.culture .filter-control--city .btn-default:hover {
+  color: #f1592a;
+}
+.cuisine .filter-control--city .btn-default,
+.cuisine .filter-control--city .btn-default:focus,
+.cuisine .filter-control--city .btn-default.focus,
+.cuisine .filter-control--city .open > .dropdown-toggle.btn-default,
+.cuisine .filter-control--city .btn-default:hover {
+  color: #8dc63f;
+}
+.entertainment .filter-control--city .btn-default,
+.entertainment .filter-control--city .btn-default:focus,
+.entertainment .filter-control--city .btn-default.focus,
+.entertainment .filter-control--city .open > .dropdown-toggle.btn-default,
+.entertainment .filter-control--city .btn-default:hover {
+  color: #00aeef;
+}
+.butn {
   border: none;
   border-radius: 3px;
   display: inline-block;
   font-size: 14px;
   padding: 5px 15px;
+  text-align: center;
 }
-.btn--green {
+.butn:hover {
+  text-decoration: none;
+}
+.butn--green {
   background: #8dc63f;
   color: #ffffff;
 }
-.btn--green:hover {
+.butn--green:hover {
   background: #91df26;
   color: #ffffff;
-  text-decoration: none;
+}
+.butn--grey {
+  background: #959595;
+  color: #ffffff;
+}
+.butn--grey:hover {
+  background: #7c7c7c;
+  color: #ffffff;
 }
 .menu ul {
   position: relative;
