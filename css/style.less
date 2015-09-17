@@ -27,7 +27,7 @@
 
 body { background: #FFF; font-family: @font-family; font-size: @basic-font; font-weight: 400; color: @text-color;}
 h1,h2,h3,h4,h6,h6,p,ul,li {margin: 0; padding:0px; }
-a { color: inherit;}
+a, a:hover { color: inherit;}
 
 .somit-header{
 	& .container{
@@ -157,10 +157,17 @@ a { color: inherit;}
 			padding-top: 16px;
 			& ul{
 				& li{
+					color: @text-color;
 					font-size: 25px;
 					font-weight: 200;
 					margin-right: 10px;					
 					text-transform: uppercase;
+					&.active-trial:nth-child(1) { color: @orange;}
+					&.active-trial:nth-child(2) { color: @blue;}
+					&.active-trial:nth-child(3) { color: @lime;}
+					&.active-trial:nth-child(4) { color: @brown;}
+					&.active-trial:nth-child(5) { color: @yellow;}
+					&.active-trial:nth-child(6) { color: @text-color;}
 					@media @mobile_tablet{
 						font-size: 20px;
 						margin-right: 0px;
@@ -168,8 +175,7 @@ a { color: inherit;}
 					& a{
 						border: 1px solid transparent;
 						border-radius: 3px;
-						padding: 4px 14px;
-						color: @text-color;
+						padding: 4px 14px;						
 						@media @mobile_tablet{
 							padding: 4px 10px;
 						}
@@ -378,6 +384,30 @@ a { color: inherit;}
 	&--cuisine { color: @lime;}
 	&--entertainment { color: @blue;}
 }
+.breadcrumbs{
+	font-size: 12px;
+	margin: 5px 0 20px;
+	text-transform: uppercase;
+	& span{
+		color: @super-light-text;
+		display: inline-block;
+		margin: 0 3px;
+	}
+	& a{
+		display: inline-block;
+		margin: 0 3px 0 0;
+		&:nth-child(2) { color: @light-text;}
+	}
+	.culture &{ 
+		& a:first-child{ color: @orange; font-weight: 600;}
+	}
+	.cuisine & {
+		& a:first-child{ color: @lime; font-weight: 600;}
+	}
+	.entertainment & {
+		& a:first-child{ color: @blue; font-weight: 600;}
+	}
+}
 .btn{
 	border: none;
 	border-radius: 3px;
@@ -474,9 +504,24 @@ a { color: inherit;}
     background-position: -10px -144px;
 }
 .icon-to-top {
-    width: 13px;
+    background-color: @light-grey;
+    background-position: -152px -89px;
+    border-radius: 3px;
+    bottom: 10%;
+    box-sizing: content-box;
+    cursor: pointer;
+    display: none;
     height: 8px;
-    background-position: -155px -94px;
+    opacity: 0.5;
+	-webkit-transition:all .2s ease-in-out;
+	transition:all .2s ease-in-out;
+    padding: 6px 3px;
+    position: fixed;
+    right: 10%;
+    width: 13px;    
+    &:hover {
+		opacity: 1;
+	}  
 }
 @font-face {
   font-family: 'Open Sans';

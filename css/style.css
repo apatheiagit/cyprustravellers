@@ -17,7 +17,8 @@ li {
   margin: 0;
   padding: 0px;
 }
-a {
+a,
+a:hover {
   color: inherit;
 }
 .somit-header .container {
@@ -154,10 +155,29 @@ a {
   padding-top: 16px;
 }
 .somit-header .bottom-header .menu ul li {
+  color: #231f20;
   font-size: 25px;
   font-weight: 200;
   margin-right: 10px;
   text-transform: uppercase;
+}
+.somit-header .bottom-header .menu ul li.active-trial:nth-child(1) {
+  color: #f1592a;
+}
+.somit-header .bottom-header .menu ul li.active-trial:nth-child(2) {
+  color: #00aeef;
+}
+.somit-header .bottom-header .menu ul li.active-trial:nth-child(3) {
+  color: #8dc63f;
+}
+.somit-header .bottom-header .menu ul li.active-trial:nth-child(4) {
+  color: #9c867a;
+}
+.somit-header .bottom-header .menu ul li.active-trial:nth-child(5) {
+  color: #e1c211;
+}
+.somit-header .bottom-header .menu ul li.active-trial:nth-child(6) {
+  color: #231f20;
 }
 @media (max-width: 992px) {
   .somit-header .bottom-header .menu ul li {
@@ -169,7 +189,6 @@ a {
   border: 1px solid transparent;
   border-radius: 3px;
   padding: 4px 14px;
-  color: #231f20;
 }
 @media (max-width: 992px) {
   .somit-header .bottom-header .menu ul li a {
@@ -408,6 +427,35 @@ a {
 .article-type--entertainment {
   color: #00aeef;
 }
+.breadcrumbs {
+  font-size: 12px;
+  margin: 5px 0 20px;
+  text-transform: uppercase;
+}
+.breadcrumbs span {
+  color: #cccccc;
+  display: inline-block;
+  margin: 0 3px;
+}
+.breadcrumbs a {
+  display: inline-block;
+  margin: 0 3px 0 0;
+}
+.breadcrumbs a:nth-child(2) {
+  color: #898989;
+}
+.culture .breadcrumbs a:first-child {
+  color: #f1592a;
+  font-weight: 600;
+}
+.cuisine .breadcrumbs a:first-child {
+  color: #8dc63f;
+  font-weight: 600;
+}
+.entertainment .breadcrumbs a:first-child {
+  color: #00aeef;
+  font-weight: 600;
+}
 .btn {
   border: none;
   border-radius: 3px;
@@ -501,9 +549,24 @@ a {
   background-position: -10px -144px;
 }
 .icon-to-top {
-  width: 13px;
+  background-color: #ebebeb;
+  background-position: -152px -89px;
+  border-radius: 3px;
+  bottom: 10%;
+  box-sizing: content-box;
+  cursor: pointer;
+  display: none;
   height: 8px;
-  background-position: -155px -94px;
+  opacity: 0.5;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding: 6px 3px;
+  position: fixed;
+  right: 10%;
+  width: 13px;
+}
+.icon-to-top:hover {
+  opacity: 1;
 }
 @font-face {
   font-family: 'Open Sans';
