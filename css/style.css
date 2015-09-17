@@ -1,5 +1,5 @@
 body {
-  background: #FFF;
+  background: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -98,13 +98,13 @@ a:hover {
   vertical-align: middle;
 }
 .somit-header .top-header .weather-enter .city-filter .city-list {
-  background: #FFF;
+  background: white;
   display: none;
   position: absolute;
   width: 105px;
 }
 .somit-header .top-header .weather-enter .city-filter .city-list ul {
-  box-shadow: 0px 0px 1px 0px #CCC;
+  box-shadow: 0px 0px 1px 0px #cccccc;
 }
 .somit-header .top-header .weather-enter .city-filter .city-list ul li {
   list-style: none;
@@ -330,7 +330,7 @@ a:hover {
 .article-item--index .article-text {
   background: url(../img/bg-article-overlay.png) repeat-x left bottom;
   bottom: 0;
-  color: #ffffff;
+  color: white;
   padding: 15px 30px;
   position: absolute;
   width: 100%;
@@ -339,6 +339,9 @@ a:hover {
   font-size: 28px;
   line-height: 30px;
   max-width: 575px;
+}
+.article-item--index .stat .count {
+  color: white;
 }
 .article-item .article-title {
   font-family: 'Arvo';
@@ -386,19 +389,111 @@ a:hover {
   display: inline-block;
   margin: 10px auto;
 }
+.article-item--top {
+  background: #ebebeb;
+  padding: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.article-item--top .article-photo {
+  overflow: hidden;
+  position: relative;
+}
+.article-item--top .article-photo .icon {
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+.article-item--top .article-text {
+  padding-right: 10px;
+}
+.article-item--top .article-title {
+  font-size: 20px;
+  line-height: 1.3;
+}
+.article-item--top .article-descr {
+  color: #898989;
+  font-size: 14px;
+  line-height: 1.3;
+  margin: 10px 0;
+}
+.article-item--top .article-share {
+  background: url(../img/article-share.png) no-repeat;
+  height: 20px;
+  margin: 10px 0;
+}
+.article-item--horizontal {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .article-item--horizontal .article-photo {
+    margin: 0 auto 10px;
+  }
+}
+.article-item--horizontal .article-title {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-right: 110px;
+}
+.article-item--horizontal .article-descr {
+  color: #898989;
+  font-size: 14px;
+  line-height: 1.3;
+  margin: 10px 0;
+}
+.article-item--horizontal .article-stat {
+  float: right;
+  margin: 0;
+}
+.article-item--horizontal .article-contacts {
+  border-top: 1px solid #ebebeb;
+  margin-top: 15px;
+  overflow: hidden;
+  padding-top: 10px;
+}
+.article-item--small {
+  margin-bottom: 20px;
+}
+.article-item--small .article-title {
+  color: #959595;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.article-contacts {
+  font-size: 14px;
+  line-height: 1.1;
+}
+.article-contacts .item {
+  overflow: hidden;
+  margin-bottom: 15px;
+  height: 30px;
+  vertical-align: middle;
+}
+.article-contacts .icon {
+  margin-right: 5px;
+  float: left;
+  vertical-align: middle;
+}
+.article-contacts .text {
+  display: block;
+  margin-left: 40px;
+}
 .article-stat {
   overflow: hidden;
   margin: 10px 0 0 0;
 }
 .article-stat .stat {
+  color: #959595;
   float: left;
   font-weight: 600;
-  font-style: 14px;
+  font-size: 14px;
   margin-right: 10px;
 }
 .article-stat .stat .count {
   opacity: 0.8;
-  margin-left: 2px;
+  margin-left: 3px;
+  vertical-align: top;
 }
 .article-type {
   display: inline-block;
@@ -409,7 +504,7 @@ a:hover {
 .article-item--special .article-type {
   border-radius: 3px;
   padding: 3px 10px;
-  color: #ffffff;
+  color: white;
 }
 .article-item--special .article-type--culture {
   background: #f1592a;
@@ -428,6 +523,34 @@ a:hover {
 }
 .article-type--entertainment {
   color: #00aeef;
+}
+.article-category {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0px 0 7px;
+  text-transform: uppercase;
+}
+.culture .article-category {
+  color: #f1592a;
+}
+.cuisine .article-category {
+  color: #8dc63f;
+}
+.entertainment .article-category {
+  color: #00aeef;
+}
+.articles-block {
+  margin: 20px 0;
+}
+.articles-block .article-list {
+  background: #fafafb;
+  padding: 20px;
+}
+.articles-block .header {
+  background: #ebebeb;
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 .breadcrumbs {
   font-size: 12px;
@@ -496,7 +619,7 @@ a:hover {
 .main-filter .btn-default.focus,
 .main-filter .open > .dropdown-toggle.btn-default,
 .main-filter .btn-default:hover {
-  background-color: #ffffff !important;
+  background-color: white !important;
   border-color: #8c8c8c;
 }
 .main-filter .caret {
@@ -545,19 +668,19 @@ a:hover {
 }
 .butn--green {
   background: #8dc63f;
-  color: #ffffff;
+  color: white;
 }
 .butn--green:hover {
   background: #91df26;
-  color: #ffffff;
+  color: white;
 }
 .butn--grey {
   background: #959595;
-  color: #ffffff;
+  color: white;
 }
 .butn--grey:hover {
   background: #7c7c7c;
-  color: #ffffff;
+  color: white;
 }
 .menu ul {
   position: relative;
@@ -592,8 +715,9 @@ a:hover {
 }
 .icon-comments {
   width: 16px;
-  height: 13px;
+  height: 16px;
   background-position: -62px -10px;
+  vertical-align: bottom;
 }
 .icon-flag {
   width: 27px;
@@ -634,6 +758,11 @@ a:hover {
   width: 24px;
   height: 12px;
   background-position: -10px -144px;
+}
+.icon-www {
+  width: 26px;
+  height: 26px;
+  background-position: -6px -96px;
 }
 .icon-to-top {
   background-color: #ebebeb;
