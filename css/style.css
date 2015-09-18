@@ -473,20 +473,42 @@ a:hover {
   font-size: 14px;
   line-height: 1.2;
 }
-.article-contacts .item {
-  overflow: hidden;
+.article-contacts .tble {
+  display: table;
   margin-bottom: 15px;
+}
+.article-contacts .trow {
+  display: table-row;
   min-height: 30px;
   vertical-align: middle;
 }
-.article-contacts .icon {
-  margin-right: 5px;
+.article-contacts .trow .icon {
+  display: table-cell;
+}
+.article-contacts .trow .text {
+  display: table-cell;
+}
+.article-contacts .item {
+  min-height: 30px;
+  margin-bottom: 15px;
+}
+.article-contacts .item .icon {
   float: left;
+}
+.article-contacts .item .icon-place {
+  margin-top: -4px;
+}
+.article-contacts .item .text {
+  display: block;
+  margin-left: 30px;
+  padding-left: 0;
+}
+.article-contacts .icon {
   vertical-align: middle;
 }
 .article-contacts .text {
-  display: block;
-  margin-left: 40px;
+  padding-left: 10px;
+  vertical-align: middle;
 }
 .article-contacts .text b {
   text-transform: uppercase;
@@ -595,6 +617,7 @@ a:hover {
 }
 .article-comment {
   background: #ebebeb;
+  margin: 30px 0;
   padding: 10px 15px;
 }
 .article-comment .comment-header {
@@ -643,6 +666,9 @@ a:hover {
 }
 .article-comment .comment-text .comment-date {
   font-size: 10px;
+}
+.article-gallery {
+  margin-bottom: 20px;
 }
 .sidebar-block {
   margin-bottom: 20px;

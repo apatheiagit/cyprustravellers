@@ -442,20 +442,42 @@ a, a:hover { color: inherit;}
 .article-contacts{
 	font-size: 14px;
 	line-height: 1.2;
-	& .item{
-		overflow: hidden;
+	& .tble{
+		display: table;
 		margin-bottom: 15px;
+	}
+	& .trow{
+		display: table-row;
 		min-height: 30px;
 		vertical-align: middle;
+		& .icon{
+		display: table-cell;
+		}
+		& .text{
+			display: table-cell;
+		}
+	}
+	& .item{
+		min-height: 30px;
+		margin-bottom: 15px;
+		& .icon{
+			float: left;
+			&-place{
+				margin-top: -4px;
+			}
+		}
+		& .text{
+			display: block;
+			margin-left: 30px;
+			padding-left: 0;
+		}
 	}
 	& .icon{
-		margin-right: 5px;
-		float: left;
 		vertical-align: middle;
 	}
 	& .text{
-		display: block;
-		margin-left: 40px;
+		padding-left: 10px;
+		vertical-align: middle;
 		& b{
 			text-transform: uppercase;
 		}
@@ -555,6 +577,7 @@ a, a:hover { color: inherit;}
 }
 .article-comment{
 	background: @light-grey;
+	margin: 30px 0;
 	padding: 10px 15px;
 	& .comment-header{
 		border-bottom: 1px solid @light-text;
@@ -605,6 +628,9 @@ a, a:hover { color: inherit;}
 			font-size: 10px;
 		}
 	}
+}
+.article-gallery{
+	margin-bottom: 20px;
 }
 .sidebar-block{
 	margin-bottom: 20px;
