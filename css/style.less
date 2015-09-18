@@ -391,6 +391,15 @@ a, a:hover { color: inherit;}
 			margin: 10px 0;
 		}
 	}
+	&--detail{
+		background: @light-grey;
+		overflow: hidden;
+		margin-bottom: 20px;
+		& .article-text{
+			color: @light-text;
+			padding: 20px 20px 20px 0;
+		}
+	}
 	&--horizontal{
 		overflow: hidden;
 		margin-bottom: 30px;
@@ -432,11 +441,11 @@ a, a:hover { color: inherit;}
 }
 .article-contacts{
 	font-size: 14px;
-	line-height: 1.1;
+	line-height: 1.2;
 	& .item{
 		overflow: hidden;
 		margin-bottom: 15px;
-		height: 30px;
+		min-height: 30px;
 		vertical-align: middle;
 	}
 	& .icon{
@@ -447,6 +456,9 @@ a, a:hover { color: inherit;}
 	& .text{
 		display: block;
 		margin-left: 40px;
+		& b{
+			text-transform: uppercase;
+		}
 	}	
 }	
 .article-stat{
@@ -492,17 +504,116 @@ a, a:hover { color: inherit;}
 	.entertainment & { color: @blue;}
 }
 .articles-block{
-	margin: 20px 0;
-	& .article-list{
-		background: @grey-fon;
-		padding: 20px;
+	margin-bottom: 20px;
+	&--small{
+		& .article-list{
+			background: @grey-fon;
+			padding: 20px;
+		}
+		& .header{
+			background: @light-grey;
+			padding: 10px 0;
+			text-align: center;
+			text-transform: uppercase;
+		}
 	}
-	& .header{
-		background: @light-grey;
-		padding: 10px 0;
-		text-align: center;
-		text-transform: uppercase;
+	&--normal{
+		& .header{
+			color: @light-text;
+			font-weight: 600;
+			padding: 10px 0;
+			text-transform: uppercase;
+		}
 	}
+}
+.article-content{
+	& .article-announce{
+		font-size: 18px;
+		font-weight: 600;
+		margin: 15px 0;
+	}
+	& .article-text{
+		& p{
+			margin: 0 0 10px 0;
+		}
+	}
+	& .article-share-block{
+		overflow: hidden;
+		& .article-stat{
+			float: left;
+			margin-top: 13px;
+		}
+		& .article-share{
+			margin-left: 110px;
+		}
+	}
+	& .article-share{
+		background: url(../img/article-share-big.png) no-repeat;
+		height: 25px;
+		margin: 10px 0;
+	}
+}
+.article-comment{
+	background: @light-grey;
+	padding: 10px 15px;
+	& .comment-header{
+		border-bottom: 1px solid @light-text;
+		padding: 5px 0;
+		margin-bottom: 10px;
+	}
+	& .comment-enter{
+		float: right;
+	}
+	& .comment-title{
+		& .count{
+			background: @lime;
+			color: @white;
+			display: inline-block;
+			font-weight: 300;
+			font-size: 18px;
+			float: left;
+			padding: 4px 8px;
+		}
+		& .title{
+			color: @light-text;
+			font-size: 24px;
+			font-weight: 600;
+			margin-left: 50px;
+		}
+	}
+	& .comment-item{
+		margin: 10px;
+		overflow: hidden;
+	}
+	& .comment-ava{
+		max-width: 90px;
+		float: left;
+	}
+	& .comment-text{
+		color: @light-text;
+		margin-left: 110px;
+		& .comment-name{
+			font-size: 14px;
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+		& .comment-discr{
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
+		& .comment-date{
+			font-size: 10px;
+		}
+	}
+}
+.sidebar-block{
+	margin-bottom: 20px;
+}
+.main-title{
+	font-size: 35px;
+	font-family: 'Arvo';
+	line-height: 40px;
+	margin: 0 0 20px 0;
 }
 .breadcrumbs{
 	font-size: 12px;

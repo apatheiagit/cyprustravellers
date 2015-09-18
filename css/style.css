@@ -1,5 +1,5 @@
 body {
-  background: white;
+  background: #FFF;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -98,13 +98,13 @@ a:hover {
   vertical-align: middle;
 }
 .somit-header .top-header .weather-enter .city-filter .city-list {
-  background: white;
+  background: #FFF;
   display: none;
   position: absolute;
   width: 105px;
 }
 .somit-header .top-header .weather-enter .city-filter .city-list ul {
-  box-shadow: 0px 0px 1px 0px #cccccc;
+  box-shadow: 0px 0px 1px 0px #CCC;
 }
 .somit-header .top-header .weather-enter .city-filter .city-list ul li {
   list-style: none;
@@ -330,7 +330,7 @@ a:hover {
 .article-item--index .article-text {
   background: url(../img/bg-article-overlay.png) repeat-x left bottom;
   bottom: 0;
-  color: white;
+  color: #ffffff;
   padding: 15px 30px;
   position: absolute;
   width: 100%;
@@ -341,7 +341,7 @@ a:hover {
   max-width: 575px;
 }
 .article-item--index .stat .count {
-  color: white;
+  color: #ffffff;
 }
 .article-item .article-title {
   font-family: 'Arvo';
@@ -422,6 +422,15 @@ a:hover {
   height: 20px;
   margin: 10px 0;
 }
+.article-item--detail {
+  background: #ebebeb;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.article-item--detail .article-text {
+  color: #898989;
+  padding: 20px 20px 20px 0;
+}
 .article-item--horizontal {
   overflow: hidden;
   margin-bottom: 30px;
@@ -462,12 +471,12 @@ a:hover {
 }
 .article-contacts {
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 .article-contacts .item {
   overflow: hidden;
   margin-bottom: 15px;
-  height: 30px;
+  min-height: 30px;
   vertical-align: middle;
 }
 .article-contacts .icon {
@@ -478,6 +487,9 @@ a:hover {
 .article-contacts .text {
   display: block;
   margin-left: 40px;
+}
+.article-contacts .text b {
+  text-transform: uppercase;
 }
 .article-stat {
   overflow: hidden;
@@ -504,7 +516,7 @@ a:hover {
 .article-item--special .article-type {
   border-radius: 3px;
   padding: 3px 10px;
-  color: white;
+  color: #ffffff;
 }
 .article-item--special .article-type--culture {
   background: #f1592a;
@@ -540,17 +552,106 @@ a:hover {
   color: #00aeef;
 }
 .articles-block {
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
-.articles-block .article-list {
+.articles-block--small .article-list {
   background: #fafafb;
   padding: 20px;
 }
-.articles-block .header {
+.articles-block--small .header {
   background: #ebebeb;
   padding: 10px 0;
   text-align: center;
   text-transform: uppercase;
+}
+.articles-block--normal .header {
+  color: #898989;
+  font-weight: 600;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+.article-content .article-announce {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 15px 0;
+}
+.article-content .article-text p {
+  margin: 0 0 10px 0;
+}
+.article-content .article-share-block {
+  overflow: hidden;
+}
+.article-content .article-share-block .article-stat {
+  float: left;
+  margin-top: 13px;
+}
+.article-content .article-share-block .article-share {
+  margin-left: 110px;
+}
+.article-content .article-share {
+  background: url(../img/article-share-big.png) no-repeat;
+  height: 25px;
+  margin: 10px 0;
+}
+.article-comment {
+  background: #ebebeb;
+  padding: 10px 15px;
+}
+.article-comment .comment-header {
+  border-bottom: 1px solid #898989;
+  padding: 5px 0;
+  margin-bottom: 10px;
+}
+.article-comment .comment-enter {
+  float: right;
+}
+.article-comment .comment-title .count {
+  background: #8dc63f;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 18px;
+  float: left;
+  padding: 4px 8px;
+}
+.article-comment .comment-title .title {
+  color: #898989;
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 50px;
+}
+.article-comment .comment-item {
+  margin: 10px;
+  overflow: hidden;
+}
+.article-comment .comment-ava {
+  max-width: 90px;
+  float: left;
+}
+.article-comment .comment-text {
+  color: #898989;
+  margin-left: 110px;
+}
+.article-comment .comment-text .comment-name {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.article-comment .comment-text .comment-discr {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.article-comment .comment-text .comment-date {
+  font-size: 10px;
+}
+.sidebar-block {
+  margin-bottom: 20px;
+}
+.main-title {
+  font-size: 35px;
+  font-family: 'Arvo';
+  line-height: 40px;
+  margin: 0 0 20px 0;
 }
 .breadcrumbs {
   font-size: 12px;
@@ -619,7 +720,7 @@ a:hover {
 .main-filter .btn-default.focus,
 .main-filter .open > .dropdown-toggle.btn-default,
 .main-filter .btn-default:hover {
-  background-color: white !important;
+  background-color: #ffffff !important;
   border-color: #8c8c8c;
 }
 .main-filter .caret {
@@ -668,19 +769,19 @@ a:hover {
 }
 .butn--green {
   background: #8dc63f;
-  color: white;
+  color: #ffffff;
 }
 .butn--green:hover {
   background: #91df26;
-  color: white;
+  color: #ffffff;
 }
 .butn--grey {
   background: #959595;
-  color: white;
+  color: #ffffff;
 }
 .butn--grey:hover {
   background: #7c7c7c;
-  color: white;
+  color: #ffffff;
 }
 .menu ul {
   position: relative;
