@@ -438,6 +438,9 @@ a, a:hover { color: inherit;}
 			margin-top: 10px;
 		}
 	}
+	&--clipped{
+		height: 280px;
+	}
 }
 .article-contacts{
 	font-size: 14px;
@@ -534,6 +537,8 @@ a, a:hover { color: inherit;}
 		}
 		& .header{
 			background: @light-grey;
+			font-size: 14px;
+			font-weight: 600;
 			padding: 10px 0;
 			text-align: center;
 			text-transform: uppercase;
@@ -555,6 +560,7 @@ a, a:hover { color: inherit;}
 		margin: 15px 0;
 	}
 	& .article-text{
+		margin-top: 20px;
 		& p{
 			margin: 0 0 10px 0;
 		}
@@ -570,10 +576,18 @@ a, a:hover { color: inherit;}
 		}
 	}
 	& .article-share{
-		background: url(../img/article-share-big.png) no-repeat;
+		//background: url(../img/article-share-big.png) no-repeat;
 		height: 25px;
 		margin: 10px 0;
 	}
+	&--photo{
+		& .article-share-block{
+			margin: -10px 0 10px 0;
+		}
+	}
+}
+.article-big-photo{
+	margin-bottom: 20px;
 }
 .article-comment{
 	background: @light-grey;

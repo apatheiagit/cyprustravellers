@@ -469,6 +469,9 @@ a:hover {
   font-size: 14px;
   margin-top: 10px;
 }
+.article-item--clipped {
+  height: 280px;
+}
 .article-contacts {
   font-size: 14px;
   line-height: 1.2;
@@ -582,6 +585,8 @@ a:hover {
 }
 .articles-block--small .header {
   background: #ebebeb;
+  font-size: 14px;
+  font-weight: 600;
   padding: 10px 0;
   text-align: center;
   text-transform: uppercase;
@@ -597,6 +602,9 @@ a:hover {
   font-weight: 600;
   margin: 15px 0;
 }
+.article-content .article-text {
+  margin-top: 20px;
+}
 .article-content .article-text p {
   margin: 0 0 10px 0;
 }
@@ -611,9 +619,14 @@ a:hover {
   margin-left: 110px;
 }
 .article-content .article-share {
-  background: url(../img/article-share-big.png) no-repeat;
   height: 25px;
   margin: 10px 0;
+}
+.article-content--photo .article-share-block {
+  margin: -10px 0 10px 0;
+}
+.article-big-photo {
+  margin-bottom: 20px;
 }
 .article-comment {
   background: #ebebeb;
